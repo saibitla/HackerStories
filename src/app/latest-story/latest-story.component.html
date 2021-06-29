@@ -1,0 +1,29 @@
+
+<input type="hidden" #paraStoryID class="form-control" [value] = "singleStory" >
+
+
+<div class="panel panel-info" *ngFor="let storyValue of storyFinal;index as i" width="200%">
+    <div class="panel-heading">
+      <h3 class="panel-title"><b>Story Line :</b> {{ storyValue.title }}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+               <p>Author: <b>{{ storyValue.by }}</b> </p>   
+            </div>
+            <div class="col-md-4">
+                <a [href]="storyValue.url" target="_blank">Reference Link</a>   
+            </div>
+        </div>
+           
+    </div>
+          
+  </div>
+
+ 
+
+<!-- https://getbootstrap.com/docs/3.4/components/#badges -->
+
+
+
+

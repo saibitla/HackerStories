@@ -1,0 +1,33 @@
+
+ <div class="list row">
+
+    <div class="col-md-12">
+        <pagination-controls
+          previousLabel="Prev"
+          nextLabel="Next"
+          [responsive]="true"
+          (pageChange)="handlePageChange($event)"
+        ></pagination-controls>
+      </div>
+    
+      <div class="col-md-12">
+            
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="
+              let story of stories | paginate : {
+                      itemsPerPage: pageSize,
+                      currentPage: page,
+                      totalItems: count
+                    };
+              let i = index
+            "            
+          >
+          <app-latest-story [singleStory]="story" ></app-latest-story>
+        
+          </li>
+        </ul>
+      </div>
+
+</div> 
