@@ -1,3 +1,13 @@
+## Assumptions / Analysis made for development
+
+1.Since the request was to display only the latest stories, used api url - 'https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty'
+which gets the latest 500 story ids(reference from api documentation) in the parent component.
+
+2. Used the api url - 'https://hacker-news.firebaseio.com/v0/item/[SomeID].json?print=pretty' to get specific story details using ID in the child component.
+
+3. Not implemented any comments/users section.
+
+
 # HackerNews
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
@@ -25,3 +35,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
